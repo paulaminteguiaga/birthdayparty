@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ｂｉｒｔｈｄａｙ　（ヾぽト）</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pixel.css">
 </head>
@@ -27,7 +28,7 @@
         background-color: black;
     }
 
-    p {
+    .blackscreen {
         color: #00ff04;
     }
 
@@ -46,6 +47,30 @@
         border: none;
     }
 
+    #first-detail {
+        position: absolute;
+        top: 40%;
+        right: 20%;
+    }
+
+    #second-detail {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+    }
+
+    #third-detail {
+        position: absolute;
+        top: 20%;
+        right: 50%;
+    }
+
+    #fourth-detail {
+        position: absolute;
+        top: 60%;
+        right: 30%;
+    }
+
 </style>
 <body>
     <div class="container-fluid">
@@ -55,75 +80,94 @@
 
         <div class="container">
 
-            <p>PLEASE join us</p>
+            <p class="blackscreen">PLEASE join us</p>
+
             <marquee behavior="scroll" direction="left" scrollamount="11">
-                <p style="color:#00ff04;"> <font size="11"> <strong>-=☆=-FRIDAY, APRIL 3RD AT 22:00-=☆=-</strong>
-              </font></p></marquee>
-            <p><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
-            <p>schedule it ->
-            <button>
-                <a
-                    target="_blank"
-                    href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NnRwcWRycjVhMDdsZ3ZrM2w3Z2ZhdjlkZ2ggcGF1bGFtaW50ZWd1aWFnYUBt&amp;tmsrc=paulaminteguiaga%40gmail.com">
-                    <img src="https://www.google.com/calendar/images/ext/gc_button1_en.gif">
-                </a>
-            </button></p>
-            <p>PAY ATTENTION TO ALL THE DETAILS: </p>
-            <img src="clickme2.gif">
+                <p class="blackscreen" style="font-size: 11;"> <font size="11"> <strong>-=☆=-FRIDAY, APRIL 3RD AT 22:00-=☆=-</strong></font></p>
+            </marquee>
+
+            <p class="blackscreen"><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
+            
+            <p class="blackscreen">schedule it ->
+                <button>
+                    <a
+                        target="_blank"
+                        href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NnRwcWRycjVhMDdsZ3ZrM2w3Z2ZhdjlkZ2ggcGF1bGFtaW50ZWd1aWFnYUBt&amp;tmsrc=paulaminteguiaga%40gmail.com">
+                        <img src="https://www.google.com/calendar/images/ext/gc_button1_en.gif">
+                    </a>
+                </button>
+            </p>
+
+            <p class="blackscreen">PAY ATTENTION TO ALL THE DETAILS: click all the buttons</p>
+
         </div>
-        <img src="https://i.giphy.com/media/7EHxQsqKcEzWE/200.webp">
-        <img src="clickme.gif">
-        <img src="clickme1.png">
-        <img src="clickme2.gif">
+        
+        <img src="clickme1.gif" class="clickme1" style="position: absolute;
+        bottom: 10%;
+        left: 15%;
+        width: 10%;">
+        <img src="clickme.gif" class="clickme2" style="margin: 1rem 30rem;">
+
+        <button class="btn btn-lg mr-2 mb-2 btn-primary clickme3" type="button" style="position: absolute;
+        bottom: 35%;
+        right: 25%;
+        z-index: 1;">
+            <span class="btn-text">Click me!</span>
+        </button>
+        <img style="position: absolute; bottom: 15%; right: 28%; "src="https://i.giphy.com/media/7EHxQsqKcEzWE/200.webp">
+        
+        <button class="btn btn-lg mr-2 mb-2 btn-primary clickme4" type="button" style="position: absolute;
+        bottom: 4%;
+        right: 25%;">
+            <span class="btn-text">💊💊 Click me! 💊💊</span>
+        </button>
     </div>
 
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+    <div class="col-12 col-lg-6 mb-4 mb-lg-0" style="display: none;" id="first-detail">
         <div class="card">
             <div class="card-header">
-                Default Primary Card Header Title
+                UNO
             </div>
             <div class="card-body">
-                <p class="card-text">Windows 95 sold for $89.99 as an upgrade or
-                    $179.99 for the full
-                    version.</p>
+                <p class="card-text">Bajen e instalen Zoom!</p>
                 <div class="d-flex justify-content-end mt-3">
-                    <button class="btn btn-sm mr-2 btn-primary border-dark"
+                    <button class="btn btn-sm mr-2 btn-primary border-dark clickme1"
                         type="button"><span class="btn-text">OK</span></button>
-                    <button class="btn btn-sm btn-primary" type="button"><span
+                    <button class="btn btn-sm btn-primary clickme1" type="button"><span
                             class="btn-text">Cancel</span></button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-12 col-lg-6 mb-4 mb-lg-5">
+    
+
+    <div class="col-12 col-lg-6 mb-4 mb-lg-5" style="display: none;" id="second-detail">
         <div class="card card-secondary">
             <div class="card-header text-center">
                 <span class="icon icon-xs w95-window-empty"></span>
-                Default Secondary Card Header Title
+                DOS
             </div>
             <div class="card-body">
-                <p class="card-text">Windows 95 was available on either floppy
-                    disks or a CD-ROM. The
-                    floppy version shipped with 13 disks.</p>
+                <p class="card-text">Tengan preparado algo para brindar, si pueden. No rompan la cuarentena.ponete maquillaje</p>
                 <div class="d-flex mt-3">
-                    <button class="btn btn-sm mr-2 btn-primary border-dark"
+                    <button class="btn btn-sm mr-2 btn-primary border-dark clickme2"
                         type="button"><span class="btn-text">OK</span></button>
-                    <button class="btn btn-sm btn-primary" type="button"><span
+                    <button class="btn btn-sm btn-primary clickme2" type="button"><span
                             class="btn-text">Cancel</span></button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+
+    <div class="col-12 col-lg-6 mb-4 mb-lg-0" style="display: none;" id="third-detail">
         <div class="card card-tertiary">
             <div class="card-header">
                 <span class="icon icon-xs w95-folder"></span>
-                <span class="ml-4">Default Tertiary Card Header Title</span>
+                <span class="ml-4"></span>
+                TRES
             </div>
             <div class="card-body">
-                <p class="card-text">The minimum system requirements called for
-                    a 386DX processor, 4MB
-                    of RAM, and a 120MB hard drive.</p>
+                <p class="card-text">Y el más importante. MAQUILLATE, DECORATE, DISFRAZATE, del cuello para arriba. EJEMPLOS por acá:</p>
                 <div class="d-flex mt-3">
                     <button class="btn btn-sm mr-2 btn-primary border-dark"
                         type="button"><span class="btn-text">OK</span></button>
@@ -133,10 +177,11 @@
             </div>
         </div>
     </div>
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+
+    <div class="col-12 col-lg-6 mb-4 mb-lg-0" style="display: none;" id="fourth-detail">
         <div class="card card-tertiary">
             <div class="card-header">
-                Card with white background
+                CUATRO
             </div>
             <div class="card-body bg-white">
                 <p class="card-text">The minimum system requirements called for
@@ -163,6 +208,23 @@
             const audio = document.getElementById("audio");
             audio.play();
         })
+
+        $( '.clickme1' ).click(function() {
+            $("#first-detail").toggle();
+        });
+
+        $( '.clickme2' ).click(function() {
+            $("#second-detail").toggle();
+        });
+
+        $( '.clickme3' ).click(function() {
+            $("#third-detail").toggle();
+        });
+
+        $( '.clickme4' ).click(function() {
+            $("#fourth-detail").toggle();
+        });
+
     </script>
 </body>
 </html>
