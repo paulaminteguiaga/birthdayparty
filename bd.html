@@ -99,25 +99,25 @@
                     <img class="col-4" src="https://media2.giphy.com/media/11KATmMFI531Ju/200.webp?cid=ecf05e471f55783fa37a6a75c6054546706accf0d34c2982&rid=200.webp">
 
                     <div class="col-8 float-right">
-                        <p id="name" style="font-family: Tahoma,Verdana,Segoe; font-weight: 700; font-size: 12px; margin: 0px;">Unknown</p>
+                        <p id="title" style="font-family: Tahoma,Verdana,Segoe; font-weight: 700; font-size: 12px; margin: 0px;">Unknown</p>
                         <p id="artist" style="font-family: Tahoma,Verdana,Segoe; font-size: 12px;">Unknown</p>
                         <div class="botonera">
-                            <button class="btn prev-button" type="button" style="width: 7rem; padding: 6px;">
+                            <button class="btn prev-button" data-dir="back" type="button" style="width: 7rem; padding: 6px;">
                                 <span class="btn-text"><i class="fa fa-step-backward"></i></span>
                             </button>
-                            <button class="btn stop-button" type="button" style="width: 7rem; padding: 6px;">
+                            <button class="btn stop-button" data-dir="stop" type="button" style="width: 7rem; padding: 6px;">
                                 <span class="btn-text"><i class="fa fa-stop"></i></span>
                             </button>
-                            <button class="btn play-button" type="button" style="width: 7rem; padding: 6px;">
+                            <button class="btn play-button" data-dir="play" type="button" style="width: 7rem; padding: 6px;">
                                 <span class="btn-text"><i class="fa fa-play"></i></span>
                             </button>
-                            <button class="btn next-button" type="button" style="width: 7rem; padding: 6px;">
+                            <button class="btn next-button" data-dir="next" type="button" style="width: 7rem; padding: 6px;">
                                 <span class="btn-text"><i class="fa fa-step-forward"></i></span>
                             </button>
                         </div>
                     </div>
 
-                    <audio id="audio" src=""></audio>
+                    <audio id="audio" autoplay loop src="sex-emoji-cut.mp3"></audio>
 
                 </div>
             </div>
@@ -248,36 +248,67 @@
     <script src="js/pixel.js"></script>
     <script>
 
+        //AUDIO
         const audios = [
             {
                 src: 'sex-emoji-cut.mp3',
-                name: 'Sex emoji cut',
+                title: 'Sex emoji cut',
                 artist: 'Metronomy'
             },
             {
                 src: 'jewel.mp3',
-                name: 'Jewel',
+                title: 'Jewel',
                 artist: 'Flume'
             },
             {
                 src: 'kenan-vs-kel.mp3',
-                name: 'Kenan vs Kel',
+                title: 'Kenan vs Kel',
                 artist: 'JPEG MAFIA'
             }
         ]
 
-        document.querySelectorAll('.botonera .btnn').forEach(button => {
-            button.addEventListener('click', (e)=> {
-                const buttonClicked = e.target.dataset.num;
-                const song = document.getElementById("audio");
-                const name = document.getElementById("audio");
-                const artist = document.getElementById("audio");
+        const song = document.getElementById("audio");
+        const title = document.getElementById("title");
+        const artist = document.getElementById("artist");
+        let audio = 0;
 
-                if()
-                audio.play();
+        document.querySelectorAll('.botonera .btn').forEach(button => {
+            button.addEventListener('click', (e)=> {
+                let buttonClicked = e.target.dataset.dir;
+
+                if (buttonClicked === 'next') {
+                    if(audio > 2) {
+                        audio = 0;
+                    }
+
+                    audio++;
+                }
+
+                if (buttonClicked === 'prev') {
+                    if(audio > 0) {
+                        audio--;
+                    }
+                }
+
+                // if (audio < 0) {
+                //     audio = 0
+                // }
+
+                song.src = audios[audio].src;
+                title.innerText = audios[audio].title;
+                artist.innerText = audios[audio].artist;
+
+                if (buttonClicked === 'play') {
+                    song.play()
+                }
+
+                if (buttonClicked === 'stop') {
+                    song.pause();
+                }
             });
         })
 
+        //DETAILS
         document.querySelectorAll('#click').forEach(click => {
             click.addEventListener('click', (e)=> {
                 const detailNumber = e.target.dataset.num;
