@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ｂｉｒｔｈｄａｙ　（ヾぽト）</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pixel.css">
 </head>
 <style>
-    .container-fluid {
+    .container-fluid.desktop {
         background: url("back.jpg") repeat;
         height: auto;
     }
 
+    .container-fluid.mobile {
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        height: 100vh;
+    }
+
     .container {
         background-color: black;
-        margin: 10rem 10rem 0 10rem;
-        width: 50%;
+        width: 70vh;
         height: 60vh;
     }
 
@@ -32,95 +38,102 @@
         color: #00ff04;
     }
 
-    /*.play-button {
-        position: absolute;
-        top: 40%;
-        right: 20%;
-        width: 5rem;
-        height: 3rem;
-        background-color: #d9d9d9;
-        border: none;
-    }*/
+    .botonera {
+        display: flex;
+        margin-top: -0.5rem;
+    }
 
     .schedule-button {
         background-color: #d9d9d9;
         border: none;
     }
 
-    #first-detail {
+    /* #detail-uno {
         position: absolute;
         top: 40%;
         right: 20%;
     }
 
-    #second-detail {
+    #detail-dos {
         position: absolute;
         top: 50%;
         right: 10%;
     }
 
-    #third-detail {
+    #detail-tres {
         position: absolute;
         top: 20%;
         right: 50%;
     }
 
-    #fourth-detail {
+    #detail-cuatro {
         position: absolute;
         top: 60%;
         right: 30%;
-    }
+    } */
 
 </style>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid mobile d-md-none">
+        <p>PLeaSe oPen it oN yoUr pHone</p>
+    </div>
+
+    <div class="container-fluid desktop d-xs-none d-md-block">
         <h1>ｗｅｌｃｏｍｅ░ｔｏ░ｍｙ░ｖｉｒｔｕａｌ░ｐａｒｔｙ　（か演意わり）</h1>
 
-        <div class="col-4 col-lg-4 mb-4 mb-lg-5" style="position: absolute; right: 5%; top: 25%;">
+        <div class="col-4" style="position: absolute; right: 5%; top: 25%;">
             <div class="card card-secondary">
                 <div class="card-header" style="margin: 2px 2px 0;
-                padding: 2px;
-                position: relative;
-                background: linear-gradient(90deg,navy,#1084d0);
-                font-weight: 700;
-                font-size: 12px;
-                line-height: 16px;
-                color: #fff;">
+                    padding: 2px;
+                    position: relative;
+                    background: linear-gradient(90deg,navy,#1084d0);
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #fff;">
                     <span class="icon icon-xs w95-window-empty"></span>
                     ｖｉｒｔｕａｌ░ｐａｒｔｙ
                 </div>
                 <div class="card-body">
-                    
+
                     <img class="col-4" src="https://media2.giphy.com/media/11KATmMFI531Ju/200.webp?cid=ecf05e471f55783fa37a6a75c6054546706accf0d34c2982&rid=200.webp">
-                    
+
                     <div class="col-8 float-right">
-                        <p style="font-family: Tahoma,Verdana,Segoe; font-weight: 700; font-size: 12px; margin: 0px;">Name of the Song</p>
-                        <p style="font-family: Tahoma,Verdana,Segoe; font-size: 12px;">Description</p>
-                        <button class="btn play-button" type="button" style="width: 7rem; padding: 6px;">
-                            <span class="btn-text">Play</span>
-                        </button>
-                        <button class="btn" type="button" style="width: 7rem; padding: 6px;">
-                            <span class="btn-text">Next</span>
-                        </button>
+                        <p id="name" style="font-family: Tahoma,Verdana,Segoe; font-weight: 700; font-size: 12px; margin: 0px;">Unknown</p>
+                        <p id="artist" style="font-family: Tahoma,Verdana,Segoe; font-size: 12px;">Unknown</p>
+                        <div class="botonera">
+                            <button class="btn prev-button" type="button" style="width: 7rem; padding: 6px;">
+                                <span class="btn-text"><i class="fa fa-step-backward"></i></span>
+                            </button>
+                            <button class="btn stop-button" type="button" style="width: 7rem; padding: 6px;">
+                                <span class="btn-text"><i class="fa fa-stop"></i></span>
+                            </button>
+                            <button class="btn play-button" type="button" style="width: 7rem; padding: 6px;">
+                                <span class="btn-text"><i class="fa fa-play"></i></span>
+                            </button>
+                            <button class="btn next-button" type="button" style="width: 7rem; padding: 6px;">
+                                <span class="btn-text"><i class="fa fa-step-forward"></i></span>
+                            </button>
+                        </div>
                     </div>
 
-                    <audio id="audio" src="sex-emoji-cut.mp3"></audio>
-                    
+                    <audio id="audio" src=""></audio>
+
                 </div>
             </div>
         </div>
-        
+
 
         <div class="container">
 
             <p class="blackscreen">PLEASE join us</p>
 
             <marquee behavior="scroll" direction="left" scrollamount="11">
-                <p class="blackscreen" style="font-size: 11;"> <font size="11"> <strong>-=☆=-FRIDAY, APRIL 3RD AT 22:00-=☆=-</strong></font></p>
+                <p class="blackscreen"><strong>-=☆=-FRIDAY, APRIL 3RD AT 22:00-=☆=-</strong></p>
             </marquee>
 
             <p class="blackscreen"><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
-            
+
             <p class="blackscreen">schedule it ->
                 <button>
                     <a
@@ -131,137 +144,146 @@
                 </button>
             </p>
 
-            <p class="blackscreen">PAY ATTENTION TO ALL THE DETAILS: click all the buttons</p>
-
+            <p class="blackscreen">SEE THE DETAILS BY CLICKING THE BUTTONS</p>
         </div>
-        
-        <img src="clickme1.gif" class="clickme1" style="position: absolute;
-        bottom: 10%;
-        left: 15%;
-        width: 10%;">
-        <img src="clickme.gif" class="clickme2" style="margin: 1rem 30rem;">
 
-        <button class="btn btn-lg mr-2 mb-2 btn-primary clickme3" type="button" style="position: absolute;
-        bottom: 35%;
-        right: 25%;
-        z-index: 1;">
+        <img id="click" class="uno" data-num="uno" src="clickme1.gif">
+        <img id="click" class="dos" data-num="dos" src="clickme.gif">
+
+        <button id="click" data-num="tres" class="tres btn btn-lg mr-2 mb-2 btn-primary" type="button">
             <span class="btn-text">Click me!</span>
         </button>
-        <img style="position: absolute; bottom: 15%; right: 28%; "src="https://i.giphy.com/media/7EHxQsqKcEzWE/200.webp">
-        
-        <button class="btn btn-lg mr-2 mb-2 btn-primary clickme4" type="button" style="position: absolute;
-        bottom: 4%;
-        right: 25%;">
+        <img src="https://i.giphy.com/media/7EHxQsqKcEzWE/200.webp">
+
+        <button id="click" data-num="cuatro" class="cuatro btn btn-lg mr-2 mb-2 btn-primary" type="button">
             <span class="btn-text">💊💊 Click me! 💊💊</span>
         </button>
-    </div>
 
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0" style="display: none;" id="first-detail">
-        <div class="card">
-            <div class="card-header">
-                UNO
+        <div style="display: none;" id="detail-uno">
+            <div class="card">
+                <div class="card-header">
+                    UNO
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Bajen e instalen Zoom!</p>
+                    <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme1"
+                            type="button"><span class="btn-text">OK</span></button>
+                        <button class="btn btn-sm btn-primary clickme1" type="button"><span
+                                class="btn-text">Cancel</span></button>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <p class="card-text">Bajen e instalen Zoom!</p>
-                <div class="d-flex justify-content-end mt-3">
-                    <button class="btn btn-sm mr-2 btn-primary border-dark clickme1"
-                        type="button"><span class="btn-text">OK</span></button>
-                    <button class="btn btn-sm btn-primary clickme1" type="button"><span
-                            class="btn-text">Cancel</span></button>
+        </div>
+
+
+        <div style="display: none;" id="detail-dos">
+            <div class="card card-secondary">
+                <div class="card-header text-center">
+                    <span class="icon icon-xs w95-window-empty"></span>
+                    DOS
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Tengan preparado algo para brindar, si pueden. No rompan la cuarentena.ponete maquillaje</p>
+                    <div class="d-flex mt-3">
+                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme2"
+                            type="button"><span class="btn-text">OK</span></button>
+                        <button class="btn btn-sm btn-primary clickme2" type="button"><span
+                                class="btn-text">Cancel</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;" id="detail-tres">
+            <div class="card card-tertiary">
+                <div class="card-header">
+                    <span class="icon icon-xs w95-folder"></span>
+                    <span class="ml-4"></span>
+                    TRES
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Y el más importante. MAQUILLATE, DECORATE, DISFRAZATE, del cuello para arriba.</p>
+                    <img src="https://i.giphy.com/media/NHzi7kVWEbK8M/200.webp">
+                    <img src="https://media2.giphy.com/media/6uHuLkud84FBC/200.webp?cid=ecf05e47fc0985e858fc3acbe8075541a29d40ad6d85c3bf&rid=200.webp">
+                    <img src="https://data.whicdn.com/images/337870451/original.gif">
+                    <img src="https://assets.vogue.com/photos/5d4359b6f29d54000885fb96/16:9/w_592,h_333,c_limit/00-promo%20(2).gif">
+                    <div class="d-flex mt-3">
+                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme3"
+                            type="button"><span class="btn-text">OK</span></button>
+                        <button class="btn btn-sm btn-primary clickme3" type="button"><span
+                                class="btn-text">Cancel</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;" id="detail-cuatro">
+            <div class="card card-tertiary">
+                <div class="card-header">
+                    CUATRO
+                </div>
+                <div class="card-body bg-white">
+                    <p class="card-text">The minimum system requirements called for
+                        a 386DX processor, 4MB
+                        of RAM, and a 120MB hard drive.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex">
+                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme4"
+                            type="button"><span class="btn-text">OK</span></button>
+                        <button class="btn btn-sm btn-primary clickme4" type="button"><span
+                                class="btn-text">Cancel</span></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 
-    <div class="col-12 col-lg-6 mb-4 mb-lg-5" style="display: none;" id="second-detail">
-        <div class="card card-secondary">
-            <div class="card-header text-center">
-                <span class="icon icon-xs w95-window-empty"></span>
-                DOS
-            </div>
-            <div class="card-body">
-                <p class="card-text">Tengan preparado algo para brindar, si pueden. No rompan la cuarentena.ponete maquillaje</p>
-                <div class="d-flex mt-3">
-                    <button class="btn btn-sm mr-2 btn-primary border-dark clickme2"
-                        type="button"><span class="btn-text">OK</span></button>
-                    <button class="btn btn-sm btn-primary clickme2" type="button"><span
-                            class="btn-text">Cancel</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0" style="display: none;" id="third-detail">
-        <div class="card card-tertiary">
-            <div class="card-header">
-                <span class="icon icon-xs w95-folder"></span>
-                <span class="ml-4"></span>
-                TRES
-            </div>
-            <div class="card-body">
-                <p class="card-text">Y el más importante. MAQUILLATE, DECORATE, DISFRAZATE, del cuello para arriba.</p>
-                <img src="https://i.giphy.com/media/NHzi7kVWEbK8M/200.webp">
-                <img src="https://media2.giphy.com/media/6uHuLkud84FBC/200.webp?cid=ecf05e47fc0985e858fc3acbe8075541a29d40ad6d85c3bf&rid=200.webp">
-                <img src="https://data.whicdn.com/images/337870451/original.gif">
-                <img src="https://assets.vogue.com/photos/5d4359b6f29d54000885fb96/16:9/w_592,h_333,c_limit/00-promo%20(2).gif">
-                <div class="d-flex mt-3">
-                    <button class="btn btn-sm mr-2 btn-primary border-dark clickme3"
-                        type="button"><span class="btn-text">OK</span></button>
-                    <button class="btn btn-sm btn-primary clickme3" type="button"><span
-                            class="btn-text">Cancel</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0" style="display: none;" id="fourth-detail">
-        <div class="card card-tertiary">
-            <div class="card-header">
-                CUATRO
-            </div>
-            <div class="card-body bg-white">
-                <p class="card-text">The minimum system requirements called for
-                    a 386DX processor, 4MB
-                    of RAM, and a 120MB hard drive.</p>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex">
-                    <button class="btn btn-sm mr-2 btn-primary border-dark clickme4"
-                        type="button"><span class="btn-text">OK</span></button>
-                    <button class="btn btn-sm btn-primary clickme4" type="button"><span
-                            class="btn-text">Cancel</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/pixel.js"></script>
     <script>
-        document.querySelector('button').addEventListener('click', ()=> {
-            const audio = document.getElementById("audio");
-            audio.play();
+
+        const audios = [
+            {
+                src: 'sex-emoji-cut.mp3',
+                name: 'Sex emoji cut',
+                artist: 'Metronomy'
+            },
+            {
+                src: 'jewel.mp3',
+                name: 'Jewel',
+                artist: 'Flume'
+            },
+            {
+                src: 'kenan-vs-kel.mp3',
+                name: 'Kenan vs Kel',
+                artist: 'JPEG MAFIA'
+            }
+        ]
+
+        document.querySelectorAll('.botonera .btnn').forEach(button => {
+            button.addEventListener('click', (e)=> {
+                const buttonClicked = e.target.dataset.num;
+                const song = document.getElementById("audio");
+                const name = document.getElementById("audio");
+                const artist = document.getElementById("audio");
+
+                if()
+                audio.play();
+            });
         })
 
-        $( '.clickme1' ).click(function() {
-            $("#first-detail").toggle();
+        document.querySelectorAll('#click').forEach(click => {
+            click.addEventListener('click', (e)=> {
+                const detailNumber = e.target.dataset.num;
+                $(`#detail-${detailNumber}`).toggle();
+            })
         });
-
-        $( '.clickme2' ).click(function() {
-            $("#second-detail").toggle();
-        });
-
-        $( '.clickme3' ).click(function() {
-            $("#third-detail").toggle();
-        });
-
-        $( '.clickme4' ).click(function() {
-            $("#fourth-detail").toggle();
-        });
-
     </script>
 </body>
 </html>
