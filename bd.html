@@ -102,7 +102,7 @@
                         <p id="title" style="font-family: Tahoma,Verdana,Segoe; font-weight: 700; font-size: 12px; margin: 0px;">Unknown</p>
                         <p id="artist" style="font-family: Tahoma,Verdana,Segoe; font-size: 12px;">Unknown</p>
                         <div class="botonera">
-                            <button class="btn prev-button" data-dir="back" type="button" style="width: 7rem; padding: 6px;">
+                            <button class="btn prev-button" data-dir="prev" type="button" style="width: 7rem; padding: 6px;">
                                 <span class="btn-text"><i class="fa fa-step-backward"></i></span>
                             </button>
                             <button class="btn stop-button" data-dir="stop" type="button" style="width: 7rem; padding: 6px;">
@@ -285,7 +285,7 @@
                 }
 
                 if (buttonClicked === 'prev') {
-                    if(audio > 0 && audio < 2) {
+                    if (audio > 0 && audio <= 2) {
                         audio--;
                     } else if (audio === 0) {
                         audio = 2
@@ -296,11 +296,9 @@
                 title.innerText = audios[audio].title;
                 artist.innerText = audios[audio].artist;
 
-                if (buttonClicked === 'play') {
-                    song.play()
-                }
-
-                if (buttonClicked === 'stop') {
+                if (buttonClicked !== 'stop') {
+                    song.play();
+                } else {
                     song.pause();
                 }
             });
