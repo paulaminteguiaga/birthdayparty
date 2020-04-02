@@ -80,6 +80,44 @@
         right: 30%;
     } */
 
+    .wordart {
+  font-family: Arial, sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wordart.purple {
+    transform: skew(0, -10deg) scale(1, 1.5);
+    -webkit-transform: skew(0, -10deg) scale(1, 1.5);
+    -moz-transform: skew(0, -10deg) scale(1, 1.5);
+    -o-transform: skew(0, -10deg) scale(1, 1.5);
+    -ms-transform: skew(0, -10deg) scale(1, 1.5);
+}
+
+.wordart.purple .text {
+    letter-spacing: -0.01em;
+    font-family: Impact;
+    background: #4222be;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top, #4222be 0%, #a62cc1 73%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4222be), color-stop(73%, #a62cc1));
+    background: -webkit-linear-gradient(top, #4222be 0%, #a62cc1 73%);
+    background: -o-linear-gradient(top, #4222be 0%, #a62cc1 73%);
+    background: -ms-linear-gradient(top, #4222be 0%, #a62cc1 73%);
+    background: linear-gradient(to bottom, #4222be 0%, #a62cc1 73%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4222be', endColorstr='#a62cc1', GradientType=0);
+    -webkit-text-stroke: 0.01em #B28FFD;
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=#b28ffd, Strength=1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 </style>
 <body>
     <div class="container-fluid mobile d-md-none">
@@ -145,7 +183,8 @@
 
             <div style="background-color: white; padding: 20px; margin: 70px 0px;">
                 <p class="blackscreen"><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
-                <p class="blackscreen">SEE THE DETAILS BY CLICKING THE BUTTONS</p>
+                <!--<p class="blackscreen">SEE THE DETAILS BY CLICKING THE BUTTONS</p>-->
+                <div class="wordart purple"><span class="text">SEE THE DETAILS BY CLICKING THE BUTTONS</span></div>
             </div>
             <div style="border: gray 15px solid; padding: 10px;">
                 <p class="blackscreen" style="font-size: 2rem;text-shadow: white 2px 2px 2px; color: #ffdc2a;">get ready and schedule it -&gt;
