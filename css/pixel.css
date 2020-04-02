@@ -1603,11 +1603,10 @@ button.section-black:focus {
 }
 
 .navbar {
-    height: 38px;
+    height: 35px;
     background: #C0C0C0;
     padding-left: 4px;
     padding-right: 4px;
-    border-bottom: 2px solid #FCFCFC;
 }
 
 .navbar-secondary {
