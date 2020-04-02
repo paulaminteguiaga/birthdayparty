@@ -11,7 +11,7 @@
 </head>
 <style>
     .container-fluid.desktop {
-        background: url("back.jpg") repeat;
+        background: url("imgs/back.jpg") repeat;
         height: auto;
     }
 
@@ -23,15 +23,18 @@
     }
 
     .container {
-        background-color: black;
-        width: 70vh;
-        height: 60vh;
+        background: url("imgs/middleback.jpeg") no-repeat;
+        background-size: cover;
+        width: 60vw;
+        height: auto;
     }
 
     h1 {
-        padding-top: 4rem;
+        font-family: monospace;
+        padding: 2rem 0px;
         color: #ff0090;
         background-color: black;
+        text-align: center;
     }
 
     .blackscreen {
@@ -79,7 +82,7 @@
     </div>
 
     <div class="container-fluid desktop d-xs-none d-md-block">
-        <h1>ｗｅｌｃｏｍｅ░ｔｏ░ｍｙ░ｖｉｒｔｕａｌ░ｐａｒｔｙ　（か演意わり）</h1>
+        <h1>ｗｅｌｃｏｍｅ░ｔｏ░ｍｙ░ｖｉｒｔｕａｌ░ｐａｒｔｙ　（か演意わり</h1>
 
         <div class="col-4" style="position: absolute; right: 5%; top: 25%;">
             <div class="card card-secondary">
@@ -117,7 +120,7 @@
                         </div>
                     </div>
 
-                    <audio id="audio" loop src="sex-emoji-cut.mp3"></audio>
+                    <audio id="audio" loop src="music/sex-emoji-cut.mp3"></audio>
 
                 </div>
             </div>
@@ -128,36 +131,29 @@
 
             <p class="blackscreen">PLEASE join us</p>
 
-            <marquee behavior="scroll" direction="left" scrollamount="11">
-                <p class="blackscreen"><strong>-=☆=-FRIDAY, APRIL 3RD AT 22:00-=☆=-</strong></p>
+            <marquee behavior="scroll" direction="left" scrollamount="11" style="background-image:url(imgs/maingif.gif); height: 60vh;">
+                <p class="blackscreen" style="color: #279c84; font-size: 3rem;"><strong>-=☆=-FRIDAY, APRIL 3RD AT 22:00-=☆=-</strong></p>
             </marquee>
 
-            <p class="blackscreen"><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
+            <div style="background-color: white; padding: 20px; margin: 70px 0px;">
+                <p class="blackscreen"><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
+                <p class="blackscreen">SEE THE DETAILS BY CLICKING THE BUTTONS</p>
+            </div>
 
-            <p class="blackscreen">schedule it ->
-                <button>
-                    <a
-                        target="_blank"
-                        href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NnRwcWRycjVhMDdsZ3ZrM2w3Z2ZhdjlkZ2ggcGF1bGFtaW50ZWd1aWFnYUBt&amp;tmsrc=paulaminteguiaga%40gmail.com">
-                        <img src="https://www.google.com/calendar/images/ext/gc_button1_en.gif">
-                    </a>
-                </button>
-            </p>
 
-            <p class="blackscreen">SEE THE DETAILS BY CLICKING THE BUTTONS</p>
+            <div style="border: gray 15px solid; padding: 10px;">
+                <p class="blackscreen" style="font-size: 2rem;text-shadow: white 2px 2px 2px; color: #ffdc2a;">get ready and schedule it -&gt;
+                    <button>
+                        <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NnRwcWRycjVhMDdsZ3ZrM2w3Z2ZhdjlkZ2ggcGF1bGFtaW50ZWd1aWFnYUBt&amp;tmsrc=paulaminteguiaga%40gmail.com">
+                            <img src="https://www.google.com/calendar/images/ext/gc_button1_en.gif">
+                        </a>
+                    </button>
+                </p>
+                <img src="imgs/getready1.webp">
+                <img src="imgs/getready2.gif">
+            </div>
+
         </div>
-
-        <img id="click" class="uno" data-num="uno" src="clickme1.gif">
-        <img id="click" class="dos" data-num="dos" src="clickme.gif">
-
-        <button id="click" data-num="tres" class="tres btn btn-lg mr-2 mb-2 btn-primary" type="button">
-            <span class="btn-text">Click me!</span>
-        </button>
-        <img src="https://i.giphy.com/media/7EHxQsqKcEzWE/200.webp">
-
-        <button id="click" data-num="cuatro" class="cuatro btn btn-lg mr-2 mb-2 btn-primary" type="button">
-            <span class="btn-text">💊💊 Click me! 💊💊</span>
-        </button>
 
         <div style="display: none;" id="detail-uno">
             <div class="card">
@@ -251,17 +247,17 @@
         //AUDIO
         const audios = [
             {
-                src: 'sex-emoji-cut.mp3',
+                src: 'music/sex-emoji-cut.mp3',
                 title: 'Sex emoji cut',
                 artist: 'Metronomy'
             },
             {
-                src: 'jewel.mp3',
+                src: 'music/jewel.mp3',
                 title: 'Jewel',
                 artist: 'Flume'
             },
             {
-                src: 'kenan-vs-kel.mp3',
+                src: 'music/kenan-vs-kel.mp3',
                 title: 'Kenan vs Kel',
                 artist: 'JPEG MAFIA'
             }
