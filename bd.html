@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ｂｉｒｔｈｄａｙ　（ヾぽト）</title>
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pixel.css">
@@ -118,10 +118,45 @@
         -webkit-text-fill-color: transparent;
     }
 
+    .mobile {
+        display: none;
+    }
+
+    .mobile p {
+        color: #00ff04;
+        font-size: 0.6rem;
+    }
+
+    .p1, .p2 {
+        list-style: none;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        .mobile {
+            display: flex;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+
 </style>
 <body>
-    <div class="container-fluid mobile d-md-none">
-        <p>PLeaSe oPen it oN yoUr pHone</p>
+    <div class="container-fluid mobile">
+        <ul class="p1" style="display: none;">
+            <li><p>PLeaSe oPen it oN yoUr pERsoNal ComPuTEr</p></li>
+            <li><p>PLeaSe oPen it oN yoUr pERsoNal ComPuTEr</p></li>
+            <li><p>PLeaSe oPen it oN yoUr pERsoNal ComPuTEr</p></li>
+            <li><p>PLeaSe oPen it oN yoUr pERsoNal ComPuTEr</p></li>
+        </ul>
+        <ul class="p2">
+            <li><p>plEAsE OpEN IT On YOuR PerSOnAL cOMpUteR</p></li>
+            <li><p>plEAsE OpEN IT On YOuR PerSOnAL cOMpUteR</p></li>
+            <li><p>plEAsE OpEN IT On YOuR PerSOnAL cOMpUteR</p></li>
+            <li><p>plEAsE OpEN IT On YOuR PerSOnAL cOMpUteR</p></li>
+        </ul>
     </div>
 
     <div class="container-fluid desktop d-xs-none d-md-block">
@@ -181,7 +216,7 @@
         <div class="container">
 
             <p class="blackscreen">PLEASE JOIN US</p>
-            <p class="blackscreen"><a style="background-color: black; color: #00ff04; text-shadow: #afafaf 2px 2px 2px;" 
+            <p class="blackscreen"><a style="background-color: black; color: #00ff04; text-shadow: #afafaf 2px 2px 2px;"
                 href="https://us04web.zoom.us/j/128150203" target="_blank">https://us04web.zoom.us/j/128150203</a></p>
 
             <marquee behavior="scroll" direction="left" scrollamount="11" style="background-image:url(imgs/maingif.gif); height: 60vh;">
@@ -397,6 +432,11 @@
                 index += index;
             })
         });
+
+        setInterval(() => {
+            $('.mobile p').toggle();
+        }, 300)
+
     </script>
 </body>
 </html>
