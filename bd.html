@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ｂｉｒｔｈｄａｙ　（ヾぽト）</title>
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pixel.css">
@@ -224,6 +224,10 @@
             <span class="btn-text">💊💊 Click me! 💊💊</span>
         </button>
 
+        <button style="position: absolute; top: 100%;" id="fly" data-num="seis" class="click btn btn-lg mr-2 mb-2 btn-primary" type="button">
+            <span class="btn-text">⭐ CLICK ⭐</span>
+        </button>
+
         <div style="display: none; position: absolute; top: 20%; left: 20%;" id="detail-uno" class="card card-tertiary">
             <div class="card-header text-center">
                 <span>Zoom v1.2.0</span>
@@ -264,11 +268,14 @@
                     TEMATICA
                 </div>
                 <div class="card-body">
-                    <p class="card-text">Del cuello para arriba: MAQUILLATE, PONETE LINDE, DECORATE, DISFRAZATE. EJEMPLOS</p>
-                    <img src="https://i.giphy.com/media/NHzi7kVWEbK8M/200.webp">
-                    <img src="https://media2.giphy.com/media/6uHuLkud84FBC/200.webp?cid=ecf05e47fc0985e858fc3acbe8075541a29d40ad6d85c3bf&rid=200.webp">
-                    <img src="https://data.whicdn.com/images/337870451/original.gif">
-                    <img src="https://assets.vogue.com/photos/5d4359b6f29d54000885fb96/16:9/w_592,h_333,c_limit/00-promo%20(2).gif">
+                    <p class="card-text">Del cuello para arriba: MAQUILLATE, PONETE LINDE, DECORATE, DISFRAZATE. EJEMPLOS:</p>
+                    
+                    <img style="width: 20rem;" src="imgs/example4.gif">
+                    <img style="width: 20rem;" src="imgs/example5.webp">
+                    <img style="width: 20rem;" src="imgs/example6.gif">
+                    <img style="width: 25rem;" src="imgs/example7.gif">
+                    <img style="width: 25rem;" src="imgs/example8.gif">
+
                     <div class="d-flex mt-3">
                         <button data-num="tres" class="btn btn-sm mr-2 btn-primary border-dark click"
                             type="button"><span class="btn-text">OK</span></button>
@@ -279,7 +286,7 @@
             </div>
         </div>
 
-        <div style="display: none; position: absolute; top: 35%; left: 30%;" id="detail-cuatro">
+        <div style="display: none; position: absolute; top: 35%; left: 20%;" id="detail-cuatro">
             <div class="card card-tertiary">
                 <div class="card-header">
                     <span class="icon icon-xs w95-folder"></span>
@@ -287,14 +294,34 @@
                     MAS EJEMPLOS
                 </div>
                 <div class="card-body">
-                    <img src="https://i.giphy.com/media/NHzi7kVWEbK8M/200.webp">
-                    <img src="https://media2.giphy.com/media/6uHuLkud84FBC/200.webp?cid=ecf05e47fc0985e858fc3acbe8075541a29d40ad6d85c3bf&rid=200.webp">
-                    <img src="https://data.whicdn.com/images/337870451/original.gif">
-                    <img src="https://assets.vogue.com/photos/5d4359b6f29d54000885fb96/16:9/w_592,h_333,c_limit/00-promo%20(2).gif">
+                    <img style="width: 20rem;" src="imgs/example1.gif">
+                    <img style="width: 20rem;" src="imgs/example2.gif">
+                    <img style="width: 20rem;" src="imgs/example3.gif">
                     <div class="d-flex mt-3">
                         <button data-num="cuatro" class="btn btn-sm mr-2 btn-primary border-dark click"
                             type="button"><span class="btn-text">OK</span></button>
                         <button data-num="cuatro" class="btn btn-sm btn-primary click" type="button"><span
+                                class="btn-text">Cancel</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none; position: absolute; top: 30%; left: 35%;" id="detail-seis">
+            <div class="card card-tertiary">
+                <div class="card-header">
+                    <span class="icon icon-xs w95-folder"></span>
+                    <span class="ml-4"></span>
+                    MOVIE INSPIRATIONS
+                </div>
+                <div class="card-body">
+                    <img style="width: 20rem;" src="imgs/example9.webp">
+                    <img style="width: 20rem;" src="imgs/example10.webp">
+                    <img style="width: 20rem;" src="imgs/example11.gif">
+                    <div class="d-flex mt-3">
+                        <button data-num="seis" class="btn btn-sm mr-2 btn-primary border-dark click"
+                            type="button"><span class="btn-text">OK</span></button>
+                        <button data-num="seis" class="btn btn-sm btn-primary click" type="button"><span
                                 class="btn-text">Cancel</span></button>
                     </div>
                 </div>
