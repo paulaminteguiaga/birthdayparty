@@ -165,13 +165,13 @@
                             </button>
                         </div>
                     </div>
-
+<!--
                     <iframe src='music/silence.mp3' type='audio/mp3' allow='autoplay' id='audio' style='display:none'></iframe>
                     <audio autoplay>
                         <source src='music/sex-emoji-cut.mp3' type='audio/mp3'>
-                    </audio>
+                    </audio> -->
 
-                    <!-- <audio id="audio" loop src="music/sex-emoji-cut.mp3"></audio> -->
+                    <audio id="audio" loop src="music/sex-emoji-cut.mp3"></audio>
 
                 </div>
             </div>
@@ -300,7 +300,7 @@
             </div>
         </div>
 
-        
+
 
         <div style="display: none; position: absolute; top: 35%; left: 30%;" id="detail-cinco">
             <div class="card card-tertiary">
@@ -353,6 +353,7 @@
         const title = document.getElementById("title");
         const artist = document.getElementById("artist");
         let audio = 0;
+        let index = 100;
 
         document.querySelectorAll('.botonera .btn').forEach(button => {
             button.addEventListener('click', (e)=> {
@@ -391,6 +392,8 @@
             click.addEventListener('click', (e)=> {
                 const detailNumber = e.target.dataset.num;
                 $(`#detail-${detailNumber}`).toggle();
+                $(`#detail-${detailNumber}`).css('z-index', index)
+                index += index;
             })
         });
     </script>
