@@ -51,6 +51,11 @@
         border: none;
     }
 
+    .buttons-container {
+        width: 70vw;
+        height: 70vh;
+    }
+
     /* #detail-uno {
         position: absolute;
         top: 40%;
@@ -82,7 +87,10 @@
     </div>
 
     <div class="container-fluid desktop d-xs-none d-md-block">
-        <h1>ｗｅｌｃｏｍｅ░ｔｏ░ｍｙ░ｖｉｒｔｕａｌ░ｐａｒｔｙ　（か演意わり</h1>
+        <nav id="navbar-main" class="navbar d-flex flex-row align-items-center navbar-main navbar-dark justify-content-end">
+            <div class="time text-center">7:58 pm</div>
+        </nav>
+        <h1>ｗｅｌｃｏｍｅ░ｔｏ░ｍｙ░ｖｉｒｔｕａｌ░ｐａｒｔｙ　（か演意わり）</h1>
 
         <div class="col-4" style="position: absolute; right: 5%; top: 25%;">
             <div class="card card-secondary">
@@ -139,8 +147,6 @@
                 <p class="blackscreen"><a href="https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09" target="_blank">https://us04web.zoom.us/j/338521878?pwd=dnE3Wk1qK0tyeSsyN29WVndYeHdNUT09</a></p>
                 <p class="blackscreen">SEE THE DETAILS BY CLICKING THE BUTTONS</p>
             </div>
-
-
             <div style="border: gray 15px solid; padding: 10px;">
                 <p class="blackscreen" style="font-size: 2rem;text-shadow: white 2px 2px 2px; color: #ffdc2a;">get ready and schedule it -&gt;
                     <button>
@@ -155,48 +161,50 @@
 
         </div>
 
+
+
+        <img src="https://i.giphy.com/media/7EHxQsqKcEzWE/200.webp">
+
+        <button id="fly" data-num="uno" class="click btn mr-2 mb-2 btn-primary border-dark" type="button">
+            <span class="btn-text">Click me!</span>
+        </button>
+
+        <button id="fly" data-num="dos" class="click btn btn-lg mr-2 mb-2 btn-secondary" type="button">
+            <span class="btn-text">Click me!</span>
+        </button>
+
+        <button id="fly" data-num="tres" class="click btn btn-lg mr-2 mb-2 btn-primary" type="button">
+            <span class="btn-text">💿 Disk</span>
+        </button>
+
+        <button id="fly" data-num="cuatro" class="click btn btn-lg mr-2 mb-2 btn-primary" type="button">
+            <span class="btn-text">💊💊 Click me! 💊💊</span>
+        </button>
+
         <div style="display: none;" id="detail-uno">
-            <div class="card">
-                <div class="card-header">
-                    UNO
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Bajen e instalen Zoom!</p>
-                    <div class="d-flex justify-content-end mt-3">
-                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme1"
-                            type="button"><span class="btn-text">OK</span></button>
-                        <button class="btn btn-sm btn-primary clickme1" type="button"><span
-                                class="btn-text">Cancel</span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div style="display: none;" id="detail-dos">
             <div class="card card-secondary">
                 <div class="card-header text-center">
                     <span class="icon icon-xs w95-window-empty"></span>
-                    DOS
+                    UNO
                 </div>
                 <div class="card-body">
                     <p class="card-text">Tengan preparado algo para brindar, si pueden. No rompan la cuarentena.ponete maquillaje</p>
                     <div class="d-flex mt-3">
-                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme2"
+                        <button data-num="uno" class="btn btn-sm mr-2 btn-primary border-dark click"
                             type="button"><span class="btn-text">OK</span></button>
-                        <button class="btn btn-sm btn-primary clickme2" type="button"><span
+                        <button data-num="uno" class="btn btn-sm btn-primary click" type="button"><span
                                 class="btn-text">Cancel</span></button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div style="display: none;" id="detail-tres">
+        <div style="display: none;" id="detail-dos">
             <div class="card card-tertiary">
                 <div class="card-header">
                     <span class="icon icon-xs w95-folder"></span>
                     <span class="ml-4"></span>
-                    TRES
+                    DOS
                 </div>
                 <div class="card-body">
                     <p class="card-text">Y el más importante. MAQUILLATE, DECORATE, DISFRAZATE, del cuello para arriba.</p>
@@ -205,11 +213,25 @@
                     <img src="https://data.whicdn.com/images/337870451/original.gif">
                     <img src="https://assets.vogue.com/photos/5d4359b6f29d54000885fb96/16:9/w_592,h_333,c_limit/00-promo%20(2).gif">
                     <div class="d-flex mt-3">
-                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme3"
+                        <button data-num="dos" class="btn btn-sm mr-2 btn-primary border-dark click"
                             type="button"><span class="btn-text">OK</span></button>
-                        <button class="btn btn-sm btn-primary clickme3" type="button"><span
+                        <button data-num="dos" class="btn btn-sm btn-primary click" type="button"><span
                                 class="btn-text">Cancel</span></button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;" id="detail-tres" class="card card-tertiary">
+            <div class="card-header text-center">
+                <span>Zoom v1.2.0</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text">bajen el zoom</p>
+                <div class="text-center">
+                    <a href="https://zoom.us/client/latest/ZoomInstaller.exe" target="_blank" class="btn btn-sm mr-2 btn-primary border-dark" role="button"><span class="btn-text">Free download</span></a>
+                    <button data-num="tres" class="btn btn-sm btn-primary click" type="button"><span
+                        class="btn-text">Cancel</span></button>
                 </div>
             </div>
         </div>
@@ -226,17 +248,15 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex">
-                        <button class="btn btn-sm mr-2 btn-primary border-dark clickme4"
+                        <button data-num="cuatro" class="btn btn-sm mr-2 btn-primary border-dark click"
                             type="button"><span class="btn-text">OK</span></button>
-                        <button class="btn btn-sm btn-primary clickme4" type="button"><span
+                        <button data-num="cuatro" class="btn btn-sm btn-primary click" type="button"><span
                                 class="btn-text">Cancel</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -301,7 +321,7 @@
         })
 
         //DETAILS
-        document.querySelectorAll('#click').forEach(click => {
+        document.querySelectorAll('.click').forEach(click => {
             click.addEventListener('click', (e)=> {
                 const detailNumber = e.target.dataset.num;
                 $(`#detail-${detailNumber}`).toggle();
